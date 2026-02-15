@@ -108,7 +108,7 @@
               <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
             </div>
             <div class="col-sm-7">
-              <div class="pb-2">mustafanaiby@gmail.com.com</div>
+              <div class="pb-2">mustafanaiby@gmail.com</div>
             </div>
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
@@ -321,21 +321,47 @@
             <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> +93764131287</div>
             <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> mustafanaiby@gmail.com</div>
           </div>
-          <div class="mt-5 d-print-none"><form action="https://formspree.io/mustafanaiby111@email.com"
-    method="POST">
-  <div class="form-outline mb-4">
-    <input type="text" id="name" class="form-control" required/>
-    <label class="form-label" for="name">Name</label>
-  </div>
-  <div class="form-outline mb-4">
-    <input type="email" id="email" class="form-control" required/>
-    <label class="form-label" for="email">Email address</label>
-  </div>
-  <div class="form-outline mb-4">
-    <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
-    <label class="form-label" for="message">Message</label>
-  </div>
-  <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+          <div class="mt-5 d-print-none">
+            <form id="contactForm" class="contact-form">
+              <div class="form-outline mb-4">
+                <input type="text" id="name" name="name" class="form-control" required />
+                <label class="form-label" for="name">Name</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="email" id="email" name="email" class="form-control" required />
+                <label class="form-label" for="email">Email address</label>
+              </div>
+              <div class="form-outline mb-4">
+                <textarea class="form-control" name="message" style="resize: none;" id="message" rows="4" required></textarea>
+                <label class="form-label" for="message">Message</label>
+              </div>
+              <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+            </form>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('contactForm');
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  var name = (document.getElementById('name').value || '').trim();
+                  var email = (document.getElementById('email').value || '').trim();
+                  var message = (document.getElementById('message').value || '').trim();
+                  if (!name || !email || !message) {
+                    alert('Please fill all fields.');
+                    return;
+                  }
+                  var emailRegex = /^\S+@\S+\.\S+$/;
+                  if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                  }
+                  var subject = encodeURIComponent('Message from ' + name + ' (' + email + ')');
+                  var body = encodeURIComponent(message + '\n\n---\nFrom: ' + name + '\nEmail: ' + email);
+                  var mailto = 'mailto:mustafanaiby@gmail.com?subject=' + subject + '&body=' + body;
+                  window.location.href = mailto;
+                });
+              });
+            </script>
 
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
