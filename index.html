@@ -25,6 +25,39 @@
     </noscript>
   </head>
   <body class="bg-light" id="top">
+    <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle" title="Toggle theme">
+      <i id="themeIcon" class="fas fa-sun"></i>
+    </button>
+
+    <div id="spaceScene" aria-hidden="true">
+      <div class="space-objects">
+        <!-- Earth (simple SVG) -->
+        <svg class="earth" viewBox="0 0 64 64" width="96" height="96" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="#2aa5ff"/>
+              <stop offset="100%" stop-color="#0a6cff"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g)" />
+          <path d="M10 36c6-6 18-8 24-4s12 6 18 0" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+
+        <!-- Spaceship (SVG) -->
+        <svg class="ship" viewBox="0 0 64 64" width="80" height="48" aria-hidden="true">
+          <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" opacity="0.95">
+            <path d="M4 40c14-8 40-22 56-16" stroke="#ffd166"/>
+            <ellipse cx="36" cy="22" rx="12" ry="6" fill="#fff" opacity="0.12"/>
+            <path d="M30 18 L40 18" stroke="#fff"/>
+          </g>
+        </svg>
+
+        <!-- Black hole -->
+        <div class="blackhole" aria-hidden="true"></div>
+        <!-- Sun for light mode -->
+        <div class="sun" aria-hidden="true"></div>
+      </div>
+    </div>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
@@ -391,5 +424,60 @@
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      // Theme toggle and starfield/space objects initialization
+      (function(){
+        function applyTheme(theme){
+            if(theme==='dark'){
+              document.documentElement.classList.remove('light');
+              document.documentElement.classList.add('dark');
+              document.body.classList.remove('light');
+              document.body.classList.add('dark');
+              document.getElementById('spaceScene').classList.add('active');
+              themeIcon.classList.remove('fa-sun'); themeIcon.classList.add('fa-moon');
+            } else {
+              document.documentElement.classList.remove('dark');
+              document.documentElement.classList.add('light');
+              document.body.classList.remove('dark');
+              document.body.classList.add('light');
+              document.getElementById('spaceScene').classList.add('active');
+              themeIcon.classList.remove('fa-moon'); themeIcon.classList.add('fa-sun');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+          window.themeIcon = document.getElementById('themeIcon');
+          var stored = localStorage.getItem('site-theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          applyTheme(theme);
+          var toggle = document.getElementById('themeToggle');
+          toggle.addEventListener('click', function(){
+            var current = document.body.classList.contains('dark') ? 'dark' : 'light';
+            var next = current==='dark' ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem('site-theme', next);
+          });
+
+          // Generate stars
+          var scene = document.getElementById('spaceScene');
+          var objs = scene.querySelector('.space-objects');
+          var starCount = 80;
+          for(var i=0;i<starCount;i++){
+            var s = document.createElement('div');
+            s.className = 'star';
+            var size = Math.random()*2.8 + 0.6;
+            s.style.width = size+'px'; s.style.height = size+'px';
+            s.style.left = (Math.random()*100)+'%';
+            s.style.top = (Math.random()*100)+'%';
+            s.style.opacity = (0.3 + Math.random()*0.9).toFixed(2);
+            s.style.animationDelay = (Math.random()*4)+'s';
+            s.style.animationDuration = (3 + Math.random()*5)+'s';
+            objs.appendChild(s);
+          }
+
+        });
+      })();
+    </script>
   </body>
 </html>
