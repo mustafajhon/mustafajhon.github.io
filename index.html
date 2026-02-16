@@ -29,6 +29,11 @@
       <i id="themeIcon" class="fas fa-sun"></i>
     </button>
 
+    <button id="langToggle" aria-label="Toggle language" class="lang-toggle" title="Toggle language">
+      <i id="langIcon" class="fas fa-globe"></i>
+      <span id="langLabel" class="lang-label">EN</span>
+    </button>
+
     <div id="spaceScene" aria-hidden="true">
       <div class="space-objects">
         <!-- Earth (simple SVG) -->
@@ -65,19 +70,19 @@
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a>
+                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title" data-i18n="nav.about">About</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title" data-i18n="nav.skills">Skills</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span class="menu-title">Experience</span></a>
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span class="menu-title" data-i18n="nav.experience">Experience</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a>
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title" data-i18n="nav.education">Education</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span class="menu-title">Portfolio</span></a>
+                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span class="menu-title" data-i18n="nav.portfolio">Portfolio</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#references" title="References"><span class="menu-title">References</span></a>
+                <li class="nav-item"><a class="nav-link" href="#references" title="References"><span class="menu-title" data-i18n="nav.references">References</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a>
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title" data-i18n="nav.contact">Contact</span></a>
                 </li>
               </ul>
             </nav>
@@ -96,8 +101,8 @@
             <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/profile.jpeg" width="160" height="160"/></div>
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
-                <h2 class="h1">Mustafa Naiby</h2>
-                <p>Front-end Developer and Graphic Designer</p>
+                <h2 class="h1" data-i18n="site.title">Mustafa Naiby</h2>
+                <p data-i18n="site.tagline">Front-end Developer and Graphic Designer</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
@@ -113,7 +118,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="mycv.pdf" data-aos="fade-right" data-aos-delay="700">Download CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Hire Me</a></div>
+              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="mycv.pdf" data-aos="fade-right" data-aos-delay="700" data-i18n="btn.download">Download CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700" data-i18n="btn.hire">Hire Me</a></div>
             </div>
           </div>
         </div>
@@ -124,33 +129,33 @@
     <div class="about-section">
       <div class="row">
         <div class="col-md-6">
-          <h2 class="h2 fw-light mb-4">About Me</h2>
-          <p>Hello! I’m Mustafa Naiby. I am passionate about UI/UX design and Web Design. I am a skilled <strong>front-end developer</strong> and good at graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done.</p>
-          <p>I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for real-time schemas.</p>
+          <h2 class="h2 fw-light mb-4" data-i18n="about.title">About Me</h2>
+          <p data-i18n="about.p1">Hello! I’m Mustafa Naiby. I am passionate about UI/UX design and Web Design. I am a skilled <strong>front-end developer</strong> and good at graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done.</p>
+          <p data-i18n="about.p2">I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for real-time schemas.</p>
         </div>
         <div class="col-md-5 offset-lg-1">
           <div class="row mt-2">
-            <h2 class="h2 fw-light mb-4">Bio</h2>
+            <h2 class="h2 fw-light mb-4" data-i18n="bio.title">Bio</h2>
             <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
+              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <span data-i18n="bio.age">Age</span></div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2">25</div>
             </div>
             <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <span data-i18n="bio.email">Email</span></div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2">mustafanaiby@gmail.com</div>
             </div>
             <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <span data-i18n="bio.phone">Phone</span></div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2">+93764131287</div>
             </div>
             <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
+              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <span data-i18n="bio.address">Address</span></div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2">Afghanistan, Mazar-e-Sahrif</div>
@@ -162,7 +167,7 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
-      <h2 class="h2 fw-light mb-4">Professional Skills</h2>
+      <h2 class="h2 fw-light mb-4" data-i18n="skills.title">Professional Skills</h2>
       <div class="row">
         <div class="col-md-6">
           <div class="mb-3"><span class="fw-bolder">HTML</span>
@@ -213,24 +218,24 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
     <div class="work-experience-section">
-      <h2 class="h2 fw-light mb-4">Work Experience</h2>
+      <h2 class="h2 fw-light mb-4" data-i18n="experience.title">Work Experience</h2>
       <div class="timeline">
         <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
           <div class="timeline-head px-4 pt-3">
-            <div class="h5">Frontend Developer</div>
+            <div class="h5" data-i18n="experience.job1.title">Frontend Developer</div>
           </div>
           <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">May, 2018 - Present</div>
-            <div>I have worked with many frontend web langauges like HTML, CSS, Java Script and React, and have done many projects that you will see letter.</div>
+            <div class="text-muted text-small mb-3" data-i18n="experience.job1.dates">May, 2018 - Present</div>
+            <div data-i18n="experience.job1.desc">I have worked with many frontend web langauges like HTML, CSS, Java Script and React, and have done many projects that you will see later.</div>
           </div>
         </div>
         <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="200">
           <div class="timeline-head px-4 pt-3">
-            <div class="h5">Graphic Designer</div>
+            <div class="h5" data-i18n="experience.job2.title">Graphic Designer</div>
           </div>
           <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">June, 2013 - May, 2015</div>
-            <div>Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</div>
+            <div class="text-muted text-small mb-3" data-i18n="experience.job2.dates">June, 2013 - May, 2015</div>
+            <div data-i18n="experience.job2.desc">Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</div>
           </div>
         </div>
         <!-- <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="400">
@@ -247,7 +252,7 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
-      <h2 class="h2 fw-light mb-4">Education</h2>
+      <h2 class="h2 fw-light mb-4" data-i18n="education.title">Education</h2>
       <!-- <div class="timeline">
         <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="0">
           <div class="timeline-head px-4 pt-3">
@@ -260,20 +265,20 @@
         </div> -->
         <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
           <div class="timeline-head px-4 pt-3">
-            <div class="h5">Self-Taught web developer           </div>
+            <div class="h5" data-i18n="education.item1.title">Self-Taught web developer</div>
           </div>
           <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">2017 - present</div>
-            <div>I have started self-studying since I was in school. In 2017 I started to learn web development. and then I participated in many web projects. with full confidence I can say that I have full hands on building web pages.</div>
+            <div class="text-muted text-small mb-3" data-i18n="education.item1.dates">2017 - present</div>
+            <div data-i18n="education.item1.desc">I have started self-studying since I was in school. In 2017 I started to learn web development. and then I participated in many web projects. with full confidence I can say that I have full hands on building web pages.</div>
           </div>
         </div>
         <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="400">
           <div class="timeline-head px-4 pt-3">
-            <div class="h5">Information Technology      </div>
+            <div class="h5" data-i18n="education.item2.title">Information Technology</div>
           </div>
           <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">2018 - 2020</div>
-            <div>I have an Associates degree in Information Technology from Afghan Institute of Technology(AIT).</div>
+            <div class="text-muted text-small mb-3" data-i18n="education.item2.dates">2018 - 2020</div>
+            <div data-i18n="education.item2.desc">I have an Associates degree in Information Technology from Afghan Institute of Technology(AIT).</div>
           </div>
         </div>
       </div>
@@ -281,7 +286,7 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
     <div class="portfolio-section">
-      <h2 class="h2 fw-light mb-4">Portfolio</h2>
+      <h2 class="h2 fw-light mb-4" data-i18n="portfolio.title">Portfolio</h2>
       <div class="row g-0">
         <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-1.jpg" width="800" height="500"/></a></div>
         <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
@@ -316,18 +321,18 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="references">
     <div class="reference-section">
-      <h2 class="h2 fw-light mb-4">References</h2>
+      <h2 class="h2 fw-light mb-4" data-i18n="references.title">References</h2>
       <div class="row"> 
         <div class="col-md-6">
           <div class="d-flex mb-2">
             <div class="avatar"><img src="images/reference-image-1.jpg" width="60" height="60"/></div>
             <div class="header-bio m-3 mb-0">
               <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Dawood </h3>
-              <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">CEO / Web Design Company</p>
+              <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100" data-i18n="references.ref1.role">CEO / Web Design Company</p>
             </div>
           </div>
           <div class="d-flex"><i class="text-secondary fas fa-quote-left"></i>
-            <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">Mustafa displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</p>
+            <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100" data-i18n="references.ref1.quote">Mustafa displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</p>
           </div>
         </div>
         <div class="col-md-6">
@@ -335,11 +340,11 @@
             <div class="avatar"><img src="images/reference-image-2.jpg" width="60" height="60"/></div>
             <div class="header-bio m-3 mb-0">
               <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Rashid Danishwari</h3>
-              <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">Front-end Developer / English Teacher</p>
+              <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100" data-i18n="references.ref2.role">Front-end Developer / English Teacher</p>
             </div>
           </div>
           <div class="d-flex"><i class="text-secondary fas fa-quote-left"></i>
-            <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">Mustafa is a great co-worker and problem solver and also a great English teacher. He is quick to extend his helping hand and makes a good team player.</p>
+            <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100" data-i18n="references.ref2.quote">Mustafa is a great co-worker and problem solver and also a great English teacher. He is quick to extend his helping hand and makes a good team player.</p>
           </div>
         </div>
       </div>
@@ -347,28 +352,28 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section">
-      <h2 class="h2 fw-light text mb-4">Contact</h2>
+      <h2 class="h2 fw-light text mb-4" data-i18n="contact.title">Contact</h2>
       <div class="row mb-4">
         <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
           <div class="mt-1">
             <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> +93764131287</div>
-            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> mustafanaiby@gmail.com</div>
+            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> <span data-i18n="contact.email">mustafanaiby@gmail.com</span></div>
           </div>
           <div class="mt-5 d-print-none">
             <form id="contactForm" class="contact-form">
               <div class="form-outline mb-4">
                 <input type="text" id="name" name="name" class="form-control" required />
-                <label class="form-label" for="name">Name</label>
+                <label class="form-label" for="name" data-i18n="form.name">Name</label>
               </div>
               <div class="form-outline mb-4">
                 <input type="email" id="email" name="email" class="form-control" required />
-                <label class="form-label" for="email">Email address</label>
+                <label class="form-label" for="email" data-i18n="form.email">Email address</label>
               </div>
               <div class="form-outline mb-4">
                 <textarea class="form-control" name="message" style="resize: none;" id="message" rows="4" required></textarea>
-                <label class="form-label" for="message">Message</label>
+                <label class="form-label" for="message" data-i18n="form.message">Message</label>
               </div>
-              <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+              <button class="btn btn-info btn-block mb-4" type="submit" data-i18n="form.send">Send</button>
             </form>
 
             <script>
@@ -416,7 +421,7 @@
           </div>
         </div>
         <div class="text-small">
-          <div class="mb-1">&copy; Mustafa Resume. All rights reserved.</div>
+          <div class="mb-1" data-i18n="footer.copy">&copy; Mustafa Resume. All rights reserved.</div>
           <div>Design - <a href="#" target="_blank">&copy;2026 </a></div>
         </div>
       </div>
@@ -447,16 +452,91 @@
 
         document.addEventListener('DOMContentLoaded', function(){
           window.themeIcon = document.getElementById('themeIcon');
+          window.langIcon = document.getElementById('langIcon');
           var stored = localStorage.getItem('site-theme');
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
           var theme = stored || (prefersDark ? 'dark' : 'light');
           applyTheme(theme);
+
           var toggle = document.getElementById('themeToggle');
           toggle.addEventListener('click', function(){
             var current = document.body.classList.contains('dark') ? 'dark' : 'light';
             var next = current==='dark' ? 'light' : 'dark';
             applyTheme(next);
             localStorage.setItem('site-theme', next);
+          });
+
+          // Translations
+          var translations = {
+            en: {
+              'nav.about':'About', 'nav.skills':'Skills', 'nav.experience':'Experience', 'nav.education':'Education', 'nav.portfolio':'Portfolio', 'nav.references':'References', 'nav.contact':'Contact',
+              'site.title':'Mustafa Naiby', 'site.tagline':'Front-end Developer and Graphic Designer',
+              'btn.download':'Download CV','btn.hire':'Hire Me',
+              'about.title':'About Me','about.p1':'Hello! I’m Mustafa Naiby. I am passionate about UI/UX design and Web Design. I am a skilled <strong>front-end developer</strong> and good at graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done.','about.p2':'I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for real-time schemas.',
+              'bio.title':'Bio','bio.age':'Age','bio.email':'Email','bio.phone':'Phone','bio.address':'Address',
+              'skills.title':'Professional Skills','experience.title':'Work Experience','education.title':'Education','portfolio.title':'Portfolio','references.title':'References','contact.title':'Contact','contact.email':'mustafanaiby@gmail.com',
+              'form.name':'Name','form.email':'Email address','form.message':'Message','form.send':'Send','footer.copy':'© Mustafa Resume. All rights reserved.',
+              'experience.job1.title':'Frontend Developer','experience.job1.dates':'May, 2018 - Present','experience.job1.desc':'I have worked with many frontend web languages like HTML, CSS, JavaScript and React, and have done many projects that you will see later.',
+              'experience.job2.title':'Graphic Designer','experience.job2.dates':'June, 2013 - May, 2015','experience.job2.desc':'Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.',
+              'education.item1.title':'Self-Taught web developer','education.item1.dates':'2017 - present','education.item1.desc':'I have started self-studying since I was in school. In 2017 I started to learn web development and participated in many web projects.',
+              'education.item2.title':'Information Technology','education.item2.dates':'2018 - 2020','education.item2.desc':'I have an Associates degree in Information Technology from Afghan Institute of Technology (AIT).'
+              , 'references.ref1.role':'CEO / Web Design Company', 'references.ref1.quote':'Mustafa displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.',
+              'references.ref2.role':'Front-end Developer / English Teacher', 'references.ref2.quote':'Mustafa is a great co-worker and problem solver and also a great English teacher. He is quick to extend his helping hand and makes a good team player.'
+            },
+            fa: {
+              'nav.about':'درباره','nav.skills':'مهارت‌ها','nav.experience':'تجربه','nav.education':'تحصیلات','nav.portfolio':'نمونه‌کارها','nav.references':'معرف‌ها','nav.contact':'تماس',
+              'site.title':'مصطفی نایبی','site.tagline':'توسعه‌دهنده فرانت‌اند و طراح گرافیک',
+              'btn.download':'دانلود رزومه','btn.hire':'همکاری',
+              'about.title':'درباره من','about.p1':'سلام! من مصطفی نایبی هستم. به طراحی رابط کاربری و طراحی وب علاقه‌مندم. من یک <strong>توسعه‌دهنده فرانت‌اند</strong> هستم و در ابزارهای گرافیکی مانند فتوشاپ و اسکچ مهارت دارم. یادگیرنده سریع و همراه خوبی برای تیم هستم.','about.p2':'من می‌توانم به‌سرعت روی اولویت‌های کم‌ریسک تمرکز کرده و تحویل‌های به‌موقع را بهینه کنم.',
+              'bio.title':'اطلاعات','bio.age':'سن','bio.email':'ایمیل','bio.phone':'تلفن','bio.address':'آدرس',
+              'skills.title':'مهارت‌های حرفه‌ای','experience.title':'سوابق کاری','education.title':'تحصیلات','portfolio.title':'نمونه‌کارها','references.title':'معرف‌ها','contact.title':'تماس','contact.email':'mustafanaiby@gmail.com',
+              'form.name':'نام','form.email':'ایمیل','form.message':'پیام','form.send':'ارسال','footer.copy':'© رزومه مصطفی. تمام حقوق محفوظ است.',
+              'experience.job1.title':'توسعه‌دهنده فرانت‌اند','experience.job1.dates':'مه ۲۰۱۸ - تاکنون','experience.job1.desc':'من با بسیاری از زبان‌های فرانت‌اند مانند HTML، CSS، JavaScript و React کار کرده‌ام و پروژه‌های متعددی انجام داده‌ام که بعداً خواهید دید.',
+              'experience.job2.title':'طراح گرافیک','experience.job2.dates':'ژوئن ۲۰۱۳ - مه ۲۰۱۵','experience.job2.desc':'تغییر نحوه دسترسی دیجیتال با کلیک‌تروها از DevOps. غوطه‌وری نانوفناوری در طول بزرگراه اطلاعات حلقه را برای تمرکز بر خط پایین می‌بندد.',
+              'education.item1.title':'خودآموخته توسعه وب','education.item1.dates':'۲۰۱۷ - تاکنون','education.item1.desc':'من از زمان مدرسه به‌صورت خودآموز مطالعه کردم. در ۲۰۱۷ شروع به یادگیری توسعه وب کردم و در پروژه‌های زیادی شرکت کردم.',
+              'education.item2.title':'فناوری اطلاعات','education.item2.dates':'۲۰۱۸ - ۲۰۲۰','education.item2.desc':'من مدرک کاردانی در فناوری اطلاعات از مؤسسه فناوری افغانستان (AIT) دارم.'
+              , 'references.ref1.role':'مدیرعامل / شرکت طراحی وب', 'references.ref1.quote':'مصطفی رفتار حرفه‌ای مثال‌زدنی‌ای نشان می‌دهد و در برابر چالش‌ها پاسخگو است. او سریع یاد می‌گیرد و دارایی ارزشمندی برای هر تیم است.',
+              'references.ref2.role':'توسعه‌دهنده فرانت‌اند / معلم زبان انگلیسی', 'references.ref2.quote':'مصطفی همکار و حل‌کنندهٔ مسئله‌ی عالی و همچنین معلم زبان انگلیسی خوبی است. او سریع کمک می‌کند و عضو تیم مفیدی است.'
+            }
+          };
+
+          function applyLanguage(lang){
+            var all = document.querySelectorAll('[data-i18n]');
+            all.forEach(function(el){
+              var key = el.getAttribute('data-i18n');
+              var val = translations[lang] && translations[lang][key];
+              if(val!==undefined){ el.innerHTML = val; }
+            });
+            // direction and lang
+            var langLabelEl = document.getElementById('langLabel');
+            if(lang==='fa'){
+              document.documentElement.lang = 'fa';
+              document.documentElement.dir = 'rtl';
+              document.body.classList.add('rtl');
+              document.getElementById('langToggle').classList.add('activated');
+              document.getElementById('langIcon').classList.remove('fa-globe');
+              document.getElementById('langIcon').classList.add('fa-flag');
+              if(langLabelEl) langLabelEl.textContent = 'فا';
+            } else {
+              document.documentElement.lang = 'en';
+              document.documentElement.dir = 'ltr';
+              document.body.classList.remove('rtl');
+              document.getElementById('langToggle').classList.remove('activated');
+              document.getElementById('langIcon').classList.remove('fa-flag');
+              document.getElementById('langIcon').classList.add('fa-globe');
+              if(langLabelEl) langLabelEl.textContent = 'EN';
+            }
+          }
+
+          // language init
+          var storedLang = localStorage.getItem('site-lang') || 'en';
+          applyLanguage(storedLang);
+          var langToggle = document.getElementById('langToggle');
+          langToggle.addEventListener('click', function(){
+            var current = document.documentElement.lang === 'fa' ? 'fa' : 'en';
+            var next = current==='fa' ? 'en' : 'fa';
+            applyLanguage(next);
+            localStorage.setItem('site-lang', next);
           });
 
           // Generate stars
