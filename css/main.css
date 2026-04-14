@@ -216,49 +216,66 @@ footer a:not(.nav-link) {
 }
 
 /* Language planet button */
-.lang-toggle{
-  position:fixed;
-  left:18px;
-  right:auto;
-  top:18px;
-  z-index:9999;
-  min-width:88px;
-  height:44px;
-  border-radius:24px;
-  border:none;
-  padding:0 12px;
-  display:flex;
-  gap:8px;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(180deg,#ffe6b3,#ffd166);
-  box-shadow:0 8px 24px rgba(2,6,23,0.12);
-  cursor:pointer;
-  transition:transform .18s ease, background .25s ease;
+.lang-toggle {
+  position: fixed;
+  left: 18px;
+  right: auto;
+  top: 18px;
+  z-index: 9999;
+  min-width: 88px;
+  height: 44px;
+  border-radius: 24px;
+  border: none;
+  padding: 0 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffe6b3, #ffd166);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background 0.25s ease;
 }
-.lang-toggle:active{transform:scale(.97)}
-.lang-toggle i{color:#361b00;font-size:16px}
-.lang-toggle .lang-label{color:#361b00;font-weight:600;font-size:13px}
+.lang-toggle:active {
+  transform: scale(0.97);
+}
+.lang-toggle i {
+  color: #361b00;
+  font-size: 16px;
+}
+.lang-toggle .lang-label {
+  color: #361b00;
+  font-weight: 600;
+  font-size: 13px;
+}
 
-.lang-toggle.activated{background:linear-gradient(180deg,#c6e8ff,#7cc0ff)}
-.lang-toggle.activated i{color:#012a4a}
-.lang-toggle.activated .lang-label{color:#012a4a}
+.lang-toggle.activated {
+  background: linear-gradient(180deg, #c6e8ff, #7cc0ff);
+}
+.lang-toggle.activated i {
+  color: #012a4a;
+}
+.lang-toggle.activated .lang-label {
+  color: #012a4a;
+}
 
 /* RTL-aware contact form styles */
 body.rtl .contact-form .form-control,
-body.rtl .contact-form textarea{
+body.rtl .contact-form textarea {
   direction: rtl;
   text-align: right;
 }
-body.rtl .contact-form .form-label{
+body.rtl .contact-form .form-label {
   text-align: right;
   float: right;
 }
 /* In RTL we prefer labels above inputs to avoid floating-label overlap */
-body.rtl .contact-form .form-outline{
+body.rtl .contact-form .form-outline {
   display: block;
 }
-body.rtl .contact-form .form-outline .form-label{
+body.rtl .contact-form .form-outline .form-label {
   position: static !important;
   transform: none !important;
   display: block !important;
@@ -266,57 +283,64 @@ body.rtl .contact-form .form-outline .form-label{
   text-align: right !important;
   float: none !important;
 }
-body.rtl .contact-form .form-control::placeholder{ /* ensure placeholder aligns */
+body.rtl .contact-form .form-control::placeholder {
+  /* ensure placeholder aligns */
   direction: rtl;
   text-align: right;
 }
 
 /* Polish contact form visuals in Persian (RTL) mode */
-body.rtl .contact-form{
+body.rtl .contact-form {
   padding: 1rem;
   border-radius: 10px;
   margin-top: 6px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
-body.rtl.light .contact-form{
-  background: rgba(255,255,255,0.98);
-  border: 1px solid rgba(10,20,40,0.06);
+body.rtl.light .contact-form {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(10, 20, 40, 0.06);
 }
-body.rtl.dark .contact-form{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.06);
+body.rtl.dark .contact-form {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-body.rtl .contact-form .form-control{
-  border: 1px solid rgba(0,0,0,0.12);
-  padding: .6rem .75rem;
+body.rtl .contact-form .form-control {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0.6rem 0.75rem;
   border-radius: 6px;
   background: transparent;
 }
-body.rtl.dark .contact-form .form-control{
-  border-color: rgba(255,255,255,0.08);
+body.rtl.dark .contact-form .form-control {
+  border-color: rgba(255, 255, 255, 0.08);
 }
-body.rtl .contact-form .form-control:focus{
-  box-shadow: 0 6px 20px rgba(3,102,214,0.08);
+body.rtl .contact-form .form-control:focus {
+  box-shadow: 0 6px 20px rgba(3, 102, 214, 0.08);
   outline: none;
-  border-color: rgba(3,102,214,0.9);
+  border-color: rgba(3, 102, 214, 0.9);
 }
 
 /* Make submit button prominent and full-width in RTL */
-body.rtl .contact-form .btn{
+body.rtl .contact-form .btn {
   width: 100%;
   border-radius: 8px;
-  padding: .6rem 0.9rem;
+  padding: 0.6rem 0.9rem;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(2,6,23,0.08);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
 }
-body.rtl .contact-form .btn.btn-info{
-  background: linear-gradient(180deg,#0d6efd,#0a58ca);
+body.rtl .contact-form .btn.btn-info {
+  background: linear-gradient(180deg, #0d6efd, #0a58ca);
   border: none;
   color: #fff;
 }
-body.rtl .contact-form .btn:active{ transform: scale(.995); }
+body.rtl .contact-form .btn:active {
+  transform: scale(0.995);
+}
 
 /* Space scene container */
 #spaceScene {
